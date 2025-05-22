@@ -1,5 +1,5 @@
 {
-  "name": "weather-app",
+  "name": "trello",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^4.1.7"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
