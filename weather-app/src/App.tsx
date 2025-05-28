@@ -42,21 +42,38 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <div className="">
       <Card className="w-[350px]">
         <CardHeader>
-
-          <CardTitle>El titulo de la card</CardTitle>
-          <CardDescription>Aplicación de temperatura</CardDescription>
+          <CardTitle>Clima actual</CardTitle>
+          <CardDescription>Ingresa la ciudad</CardDescription>
         </CardHeader>
         <CardContent>
-          <p>Información</p>
+          <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Ingresa una ciudad" className="w-full p-2 border border-gray-300 rounded-md" />
+          <button onClick={fetchData} className="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" >Buscar Clima</button>
         </CardContent>
         <CardFooter>
           <button onClick={fetchData}>Buscar Data</button>
         </CardFooter>
       </Card>
+      {data && (
+        <div className="text-center">
+          <h3 className="text-xl font-bold">{data.location.name}, {data.location.country}</h3>
+          <p>{data.location.localtime}</p>
+          <img
+            src={`https:${data.current.condition.icon}`}
+            alt={data.current.condition.text}
+            className="mx-auto"
+          />
+          <p className="text-2xl font-bold">{data.current.temp_c}°C</p>
+          <p>{data.current.condition.text}</p>
+        </div>
+      )
+
+      }
+      <CardFooter/>
     </div>
+
   )
 }
 
