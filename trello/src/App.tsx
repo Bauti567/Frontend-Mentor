@@ -1,10 +1,15 @@
-import Layout from './components/Layout';
+import {closestCenter, DndContext} from '@dnd-kit/core';
+
 
 function App() {
   return (
-    <div className="container">
-      <Layout></Layout>
-    </div>  
+    <div className="mx-auto flex flex-1 w-full items-center overflow-x-auto px-[40px]">
+      <DndContext
+      
+      >
+
+      </DndContext>
+    </div>
   )
 }
 

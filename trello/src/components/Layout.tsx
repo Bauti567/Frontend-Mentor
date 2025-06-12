@@ -16,15 +16,15 @@ const columns = [
 ]
 
 function Layout() {
-  return (
-    <div className='grid grid-cols-3'>
-        {
-            columns.map((col)=>(
-                <Column key={col.id} content={col}></Column>
-            ))
-        }
-    </div>
-  )
+    return (
+        <div className='grid grid-cols-3'>
+            {
+                columns.map((col) => (
+                    <Column key={col.id} content={col}></Column>
+                ))
+            }
+        </div>
+    )
 }
 
 export default Layout;
