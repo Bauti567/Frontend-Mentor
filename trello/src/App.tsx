@@ -1,16 +1,8 @@
-import {closestCenter, DndContext} from '@dnd-kit/core';
+import Board from './components/Board';
 
 
 function App() {
-  return (
-    <div className="mx-auto flex flex-1 w-full items-center overflow-x-auto px-[40px]">
-      <DndContext
-      
-      >
-
-      </DndContext>
-    </div>
-  )
+  return <Board/>
 }
 
 export default App;
